@@ -1,0 +1,269 @@
+.container {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex
+}
+
+.left {
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #69c6ba;
+    padding: 5px;
+    margin: 5px;
+    flex: 0.6;
+    margin-top: 5px;
+}
+
+.right {
+    border: 1px solid black; 
+    border-radius: 4px ;
+    padding: 5px;
+    margin: 5px;
+    margin-top: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 5px;
+}
+
+button{
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 10px;
+    color:white
+}
+.buttonround {
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 100%;
+    color: white
+}
+.left h3 {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.right h3 {
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.left label {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.right label {
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.left input {
+    width: 30%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.left select {
+    width: 30%;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.flex{
+    display: flex;
+    flex-grow: 1;
+    margin: 20px 20px;
+    margin-left: 10%;
+}
+.label-text{
+    margin: 10px 10px;
+    width: 20%;
+}
+.input-thongtin{
+    width: 60%;
+    
+}
+.input-thongtin input{
+    width: 90%;
+    height: 50px;
+}
+.custom-fileInput{
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+}
+.chon-fileButton{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.btn-submit{
+   
+}
+.btn-submit p{
+    text-align: center;
+    position: relative;
+    top:30%;
+}
+.btn-quayve a{
+    text-decoration: none;
+    color: white;
+}
+.btn-quayve{
+    margin-right: 1%;
+}
+.btn-submit-1 input{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+}
+.btn-submit-thanhtoan{
+    background-color: #4CAF50;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+   
+}
+.btn-submit-thanhtoan p{
+    color: white;
+}
+.center-text-1 p{
+    text-align: center;
+    position: relative;
+    top: 20%;
+}
+.btn-submit-quayve{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-top: 6px;
+}
+.btn-submit-1{
+    margin-top: 12px;
+}
+.combo-submit{
+    position: relative;
+    width: fit-content;
+    margin-left: 30%;
+}
+.thongtinbosung{
+    margin-left: 100px;
+}
+.thong-tin-chuyen-bay{
+    margin-top: 20%;
+    border: solid;
+    border-width:2px ;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 5%;
+    
+}
+.thong-tin-cat-canh{
+    width: 30%;
+}
+.thong-tin-ha-canh{
+    width: 30%;
+}
+.icon-may-bay{
+    width: 30%;
+}
+.icon-may-bay img{
+    transform: rotate(90deg);
+    
+}
+.center-text{
+    text-align: center;
+    height: 50px;
+}
+
+.center-item{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.content-thongtinchuyenbay{
+    width:100%; 
+    height:400px;
+    margin-top: 2%;
+}
+.btn-thanhtoan a{
+    text-decoration: none;
+    color: white;
+}
+.btn-thanhtoan{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top:2%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+}
+.selection-width select{
+    width: 100%;
+}
+.input-thongtin select{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 4px;
+}
+.btn-thanhtoan-1 button{
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    position: relative;
+    right: 20%;
+    width: 290px;
+    height: 50px;
+    background-color: #4CAF50;
+}
+.btn-thanhtoan-1 p{
+    text-align: center;
+    color: white;
+    margin-top: 3%;
+    
+}
+.cachdong{
+    margin-top: 10%;
+}
+.bold h4{
+    font-weight: 600;
+}

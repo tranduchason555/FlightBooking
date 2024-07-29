@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classic Login Form Example</title>
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet">
+</head>
+<body>
+    <nav class="gtco-nav" role="navigation" >
+        <div class="gtco-container">
+            
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <div id="gtco-logo"><a [routerLink]="['/trangchu']">SKYHIGH <em>.</em></a></div>
+                </div>
+                <div class="col-xs-8 text-right menu-1">
+                    <ul>
+                        <li><a [routerLink]="['/thongtinhanhchinh']">Thông Tin Hành Trình</a></li>
+                        <li class="has-dropdown">
+                            <a  [routerLink]="['/datvemaybay']">Đặt Vé</a>
+                            <!-- <ul class="dropdown">
+                                <li><a href="#">Europe</a></li>
+                                <li><a href="#">Asia</a></li>
+                                <li><a href="#">America</a></li>
+                                <li><a href="#">Canada</a></li>
+                            </ul> -->
+                        </li>
+                        <li><a [routerLink]="['/lienhe']">Liên hệ</a></li>
+                
+                        <li class="has-dropdown"  >
+                            <a  >Tài Khoản</a>
+                        
+                            <ul class="dropdown">
+                                <li><a [routerLink]="['/dangnhap']">Đăng nhập</a></li>
+                                <li><a [routerLink]="['/dangky']">Đăng ký</a></li>
+                                <li><a href="#">Trợ giúp</a></li>
+                        
+                            </ul>
+                        </li>	
+                        
+                        
+                    </ul>	
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+    <!-- partial:index.partial.html -->
+    <section class='login' id='login'>
+        <div class='head'>
+            <h1 class='company'>Đăng Ký Tài Khoản</h1>
+        </div>
+        <div class='form'>
+            <form [formGroup]="dangkyForm" (ngSubmit)="save()">
+                <input type="text" placeholder='Họ Tên' class='text' id='username' formControlName="tenKhachHang" ><br><br>
+                <input type="text" placeholder='Tên Tài Khoản' class='text' id='username' required formControlName="taikhoan"><br>
+                <input type="password" placeholder='Mật Khẩu' class='password' formControlName="matKhau"><br>
+                <input style="margin-top:0px" type="password" placeholder='Nhập Lại Mật Khẩu' class='repassword'formControlName="repassword" ><br>
+                <input type="text" placeholder='Số điện thoại' class='text' id='username' formControlName="soDienThoai" ><br>
+                <label for="birthday" class="gender" >Ngày Sinh:</label>
+                <input type="date" id="date" class="gender" formControlName="ngaySinh">
+                <select name="cars" id="cars" class="gender" formControlName="gioiTinh">
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select>
+                <br>
+                <br>
+                <input type="submit" class='btn-login' value="Đăng Ký">
+                <a href="#" class='forgot' [routerLink]="['/dangnhap']">Đăng nhập</a>
+            </form>
+        </div>
+    </section>
+
+</body>
+<p-toast></p-toast>
+</html>

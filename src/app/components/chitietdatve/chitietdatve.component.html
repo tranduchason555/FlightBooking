@@ -1,0 +1,207 @@
+<nav class="gtco-nav" role="navigation" >
+    <div class="gtco-container">
+        
+        <div class="row">
+            <div class="col-sm-4 col-xs-12">
+                <div id="gtco-logo"><a *ngIf="taikhoan!=null" [routerLink]="['/trangchu',{taikhoan:taikhoan}]">SKYHIGH <em>.</em></a>
+                    <a *ngIf="taikhoan==null" [routerLink]="['/trangchu']">SKYHIGH <em>.</em></a>
+                </div>
+            </div>
+            <div class="col-xs-8 text-right menu-1">
+                <ul>
+                    <li><a *ngIf="taikhoan!=null" [routerLink]="['/ve',{taikhoan:taikhoan}]">Xem Vé</a>
+                        <a *ngIf="taikhoan==null" [routerLink]="['/thongtinhanhchinh']">Thông Tin Hành Trình</a>
+                    </li>
+                    
+                    <li class="has-dropdown">
+                        <a  *ngIf="taikhoan!=null" [routerLink]="['/datvemaybay',{taikhoan:taikhoan}]">Đặt Vé</a>
+                        <a  *ngIf="taikhoan==null" [routerLink]="['/datvemaybay']">Đặt Vé</a>
+                        <!-- <ul class="dropdown">
+                            <li><a href="#">Europe</a></li>
+                            <li><a href="#">Asia</a></li>
+                            <li><a href="#">America</a></li>
+                            <li><a href="#">Canada</a></li>
+                        </ul> -->
+                    </li>
+                    <li><a *ngIf="taikhoan!=null" [routerLink]="['/lienhe',{taikhoan:taikhoan}]">Liên hệ</a>
+                        <a *ngIf="taikhoan==null" [routerLink]="['/lienhe']">Liên hệ</a>
+                    </li>
+            
+                    <li class="has-dropdown"  >
+                        <a *ngIf="taikhoan==null" [routerLink]="['/dangnhap']">Đăng nhập</a>
+                        <a *ngIf="taikhoan!=null" [routerLink]="['/thongtincanhan',{taikhoan:taikhoan}]" ><b>Xin chào {{taikhoan}}</b></a>
+                        <a *ngIf="taikhoan!=null" [routerLink]="['/trangchu']" ><b>Đăng xuất</b></a>
+                        <!-- <ul class="dropdown">
+                            <li><a ></a></li>
+                            <li><a [routerLink]="['/dangky']">Đăng ký</a></li>
+                            <li><a href="#">Trợ giúp</a></li>
+                    
+                        </ul> -->
+                    </li>	
+                    
+                    
+                </ul>	
+            </div>
+        </div>
+        
+    </div>
+</nav>
+<header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(assets/images/hinh-anh-may-bay.jpg)">
+    <div class="overlay"></div>
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <div class="row row-mt-15em">
+
+                    <div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
+                        <h1>Thông Tin Chuyến Bay</h1>	
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="left" *ngIf="taikhoan==null">
+        <form > 
+        <div>
+                <h2 align="center" style="margin-top: 5px; color: white;">THÔNG TIN CƠ BẢN</h2>
+                <div class="ThongTinCoBan">
+                    <div class="flex">
+                        <div class="label-text"><label>Họ và Tên</label></div>
+                        <div class="input-thongtin"><input type="text"  placeholder=""   readonly oncopy="return false;" /></div>
+                    </div>  
+                    <div class="flex">
+                        <div class="label-text"><label for="ngaysinh">Ngày sinh</label></div>
+                        <div class="input-thongtin"> <input type="text"  placeholder=""  readonly oncopy="return false;"/></div>
+                    </div>
+                    <div class="flex">
+                        <div class="label-text"><label for="">Số điện thoại</label></div>
+                        <div class="input-thongtin"><input type="text" placeholder=""  readonly oncopy="return false;"></div>
+                    </div>
+                    <!-- <div class="flex">
+                        <div class="label-text"><label for="">Email</label></div>
+                        <div class="input-thongtin"><input type="text" placeholder="Nhập Email..."></div>
+                    </div> -->
+                    <div class="flex">
+                        <div class="label-text"><label for="">Hạng ghế</label></div>
+                        <div class="input-thongtin">
+                            <select name="" id="" class="selection-width" (change)="onSelectionChange($event)" >
+                                <option value="2000000">Thương gia</option>
+                                <option value="1000000">Phổ thông</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- <div class="btn-thanhtoan btn-thanhtoan-1"><button><p>Xác nhận</p></button></div> -->
+                </div>
+            </div>
+        </form>
+ 
+    </div>
+    
+    <div class="left" *ngIf="taikhoan!=null">
+        <ng-container *ngFor="let hanhkhach of hanhkhachs">
+        <form >
+             
+            <div>
+                <h2 align="center" style="margin-top: 5px; color: white;">THÔNG TIN CƠ BẢN</h2>
+                <div class="ThongTinCoBan">
+                    <div class="flex">
+                        <div class="label-text"><label>Họ và Tên</label></div>
+                        <div class="input-thongtin"><input type="text"  placeholder="{{hanhkhach.tenKhachHang}}" readonly oncopy="return false;"  /></div>
+                    </div>  
+                    <div class="flex">
+                        <div class="label-text"><label for="ngaysinh">Ngày sinh</label></div>
+                        <div class="input-thongtin"> <input type="text"  placeholder="{{hanhkhach.ngaySinh}}" readonly oncopy="return false;"  /></div>
+                    </div>
+                    <div class="flex">
+                        <div class="label-text"><label for="">Số điện thoại</label></div>
+                        <div class="input-thongtin"><input type="text" placeholder="{{hanhkhach.soDienThoai}}" readonly oncopy="return false;" ></div>
+                    </div>
+                    <!-- <div class="flex">
+                        <div class="label-text"><label for="">Email</label></div>
+                        <div class="input-thongtin"><input type="text" placeholder="Nhập Email..."></div>
+                    </div> -->
+                    <div class="flex">
+                        <div class="label-text"><label for="">Hạng ghế</label></div>
+                        <div class="input-thongtin">
+                            <select name="" id="" class="selection-width" (change)="onSelectionChange($event)">
+                                <option value="">Chọn</option>
+                                <option value="20">Thương gia</option>
+                                <option value="10">Phổ thông</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- <div class="btn-thanhtoan btn-thanhtoan-1"><button><p>Xác nhận</p></button></div> -->
+                </div>
+            </div>
+        </form>
+    </ng-container>
+    </div>
+
+    <div class="right" style="flex: 0.5">
+       
+        <form  method="post" (ngSubmit)="save()">
+            <ng-container *ngFor="let thongtinchuyenbay of thongtinchuyenbays">
+            <h3>CHI TIẾT CHUYẾN BAY</h3>
+            <div class="content-thongtinchuyenbay">
+                <div class="thong-tin-chuyen-bay center-item">
+                  
+                    <div class="thong-tin-cat-canh">
+                        <div class="thong-tin-thoi-gian">
+                            <div class="cachdong"><h3>Giờ đi</h3></div>
+                            <div class="center-text bold"><h4 >{{this.thongtinchuyenbay.gioCatCanh}}</h4></div>
+                        </div>
+                        <div class="thong-tin-dia-chi">
+                            <div><h3>Địa điểm</h3></div>
+                            <!-- <div class="center-text bold" ><h4>{{thongtinchuyenbay.maSbayDi}}</h4></div> -->
+                            <div class="center-text bold"><h4 >{{thongtinchuyenbay.tenTinhThanhSanBayDi}}</h4></div>
+                        </div>
+                    </div>
+                    <div class="icon-may-bay center-item"><img src="assets/images/icon-may-bay.png" alt=""></div>
+                    <div class="thong-tin-ha-canh">
+                        <div>
+                            <div class="cachdong"><h3>Giờ đến</h3></div>
+                            <div class="center-text bold"><h4>{{thongtinchuyenbay.gioHaCanh}}</h4></div>
+                        </div>
+                        <div>
+                            <div><h3>Địa Điểm</h3></div>
+                            <!-- <div class="center-text bold"><h4>{{thongtinchuyenbay.maSbayDen}}</h4></div> -->
+                            <div class="center-text bold"><h4>{{thongtinchuyenbay.tenTinhThanhSanBayDen}}</h4></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div style="border: solid; border-width: thin">
+                <div style="padding:10px">
+                    <label>Số lượng</label>
+                    <label style="float:right"><input type="number" [(ngModel)]="value" name="value"></label>
+                </div>
+            </div>
+            <div style="border:solid;border-width:thin">
+                <div style="padding:10px">
+                    <label>Thuế và các khoản thu:</label>
+                    <label style="float:right"><input type="text" value="{{this.newValue}}" readonly oncopy="return false;" ></label>
+                </div>
+            </div>
+            <div style="border:solid;border-width:thin">
+                <div style="padding:10px">
+                    <label style="font-size:18px">Tổng số tiền:</label>
+                    <label style="float:right" ><input type="text" value="{{this.newValue}}" readonly oncopy="return false;" ></label>
+                </div>
+            </div>
+            <div class="flex combo-submit">
+                <div class="btn-quayve"><a href=""><div class="btn-submit-quayve center-text-1"><p>Quay về</p></div></a></div>
+                <div class="btn-thanhtoan">
+                    <input type="submit" class='btn-login' value="Thanh toán"  class="btn-submit-thanhtoan center-text-1" style="color:white;">
+                </div>
+            </div>
+        </ng-container>
+        </form>
+
+    </div>
+
+</div>  
+<p-toast></p-toast>

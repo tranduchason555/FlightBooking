@@ -1,0 +1,69 @@
+.section-1-hangngang{
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+*{
+    font-family: Assistant, sans-serif;
+	font-weight: 300;
+}
+.hinh-1{
+    width: 40%;
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 5%;
+    
+}
+.hinh-1-1 img{
+    width: 100%;
+}
+.hinh-1-duoi{
+    background-color: #69c6ba;
+    display: flex;
+}
+.tieu-de-hinh{
+    width: 90%;
+}
+.tieu-de-hinh p{
+    font-size: larger;
+    font-weight: 500;
+    color: white;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+.nut-quay-ve{
+    width: 10%;
+}
+.nut-quay-ve button{
+    margin-top: 20%;
+    margin-left: 0%;
+    outline: none;
+    border: none;
+    background-color:#69c6ba;
+    margin-right: 20%;
+}
+.nut-quay-ve button img{
+    width: 100%;
+}
+
+.hinh-2{
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    width: 40%;
+    
+}
+.section-1-tthc{
+    width: fit-content;
+    margin-left: 10%;
+    margin-top: 43%;
+}
+.title{
+    margin-left: 10%;    
+}
+.title h1{
+    font-weight: bolder;
+    font-weight: 800;
+}

@@ -1,0 +1,352 @@
+/********** Template CSS **********/
+:root {
+    --primary: #B31E8D;
+    --secondary: #0B2154;
+    --light: #F2F2F2;
+    --dark: #111111;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+ .hidden-radio {
+      display: none; /* hoặc visibility: hidden; */
+    }
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+.selection-1{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    width: 100%;
+
+}
+.selection1{
+    background-color: #adf5eb;
+    width: 90%;
+    margin-left:5%;
+    border-radius: 50px;
+    margin-top: 2%;
+    border:solid ;
+    border-color:#69c6ba ;
+
+}
+.icon-logo{
+    width: 10%;
+    margin-left: 1%;
+}
+.icon-logo p{
+    text-align: center;
+    font-size: medium;
+    font-weight: 500;
+    margin-top: 5%;
+}
+.icon-logo img{
+    margin-top: 20%;
+    margin-left: 13%;
+}
+.in4-flight{
+    display: flex;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.time-di{
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 5%;
+    text-align: center;
+    margin-top: 3%;
+}
+.icon-mui-ten{
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 10%;
+}
+.icon-mui-ten img{
+    width: 100%;
+    display: inherit;
+    margin-top: 50%;
+}
+.time-den{
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 5%;
+    text-align: center;
+    margin-top: 3%;
+}
+.tong-time{
+    margin-left: 2%;
+    margin-right: 2%;
+    width:20%;
+    text-align: center;
+    margin-top: 3%;
+}
+.tong-gia{
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 20%;
+    text-align: center;
+    margin-top: 5%;
+}
+.button-select{
+    margin-left: 5%;
+    margin-right: 2%;
+    background-color: white;
+    width: 10%;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 5%;
+    border: solid;
+    border-color: #69c6ba;
+    border-width:2px ;
+}
+.button-select h3{
+    width: 100%;
+    text-align: center;
+
+}
+.text-chon{
+    margin-top: 15%;
+}
+.dropdown-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 45%;
+    background-color: #69c6ba;
+    margin-left:70%;
+}
+.dropdown-btn img{
+    width: 30%;
+}
+.dropdown-in4{
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 10%;
+    margin: 2%;
+}
+.logo-after-dropdown{
+    margin: 2%;
+    width: 30%;
+    height: 150px;
+}
+.in4-after-dropdown{
+    position: relative;
+    display: flex;
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 1%;
+}
+.time-after-dropdown{
+    width: 30%;
+    margin: 2%;
+    height: 150px;
+}   
+.time-di-after-dropdown{
+    margin: 2%;
+    text-align: center;
+    background-color: #adf5eb;
+    border-radius: 10px;
+    border: solid;
+    border-color: #69c6ba;
+}
+.tongtime-after-dropdown{
+    margin-top:10% ;
+    width: fit-content;
+    margin-bottom: 7%;
+}
+.time-ve-after-dropdown{
+    margin: 2%;
+    text-align: center;
+    background-color: #adf5eb;
+    border-radius: 10px;
+    border: solid;
+    border-color: #69c6ba;
+}
+.icon-move-after-dropdown{
+    margin-top: 2%;
+    
+}
+.icon-after-dropdown img{
+    margin-left: 37%;
+    margin-top: 10%;
+}
+.icon-move-after-dropdown img{
+    width: 60%;
+    margin-top: 50%;
+}
+.dong-ho-after-dropdown{
+    display: flex;
+}
+
+.dia-diem-after-dropdown{
+    margin: 2%;
+    width: 30%;
+    height: 150px;
+}
+.dropdown-content{
+    width: 70%;
+    margin-left: 0%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 30px;
+    display: none;
+    position: absolute;
+    background-color: #dcfffa;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    height: 200px;
+    border: solid;
+    border-color: #69c6ba;
+}
+.diem-di-after-dropdown{
+    text-align: center;
+}
+.diem-den-after-dropdown{
+    text-align: center;
+    width: 100%;
+    margin-top:31%;
+}
+.text-after-dropdown{
+    text-align: center;
+}
+.macb-after-dropdown{
+    text-align: center;
+}
+.show-in4-after-dropdown {
+    display:inline-block;
+    
+}
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: .5s;
+    background-color: #09C6AB;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 2px;
+}
+
+
+/*** Navbar ***/
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+/* TÌM KIẾM */
+.thongtinchuyenbay-container{
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    
+}
+.section-1{
+    width: 60%;
+    margin-top: 2%;
+}
+.container-1{
+    width: 40%;
+    margin-top: 2%;
+}
+.selection-width{
+   width: 450px;
+}
+.btn-center{
+   margin-left: 17%;
+}
+
+
+ 

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Admin Dashbord html and css</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<input type="checkbox" id="menu" name="">
+	<div class="sidebar">
+		<div class="sidebar-brand">
+			<h2><span class="fa fa-user-o"></span>Xin chào</h2>
+		</div>
+
+		<div class="sidebar-menu">
+			<ul>
+				<li>
+					<a href="" class="active"><span class="fa fa-home"></span><span>Trang chủ</span></a>
+				</li>
+				<li>
+					<a href=""><span class="fa fa-tasks"></span><span>Sân Bay</span></a>
+				</li>
+				<li>
+					<a href=""><span class="fa fa-th-large"></span><span>Hành khách</span></a>
+				</li>
+				<li>
+					<a href=""><span class="fa fa-line-chart"></span><span>Chuyến bay</span></a>
+				</li>
+				<li>
+					<a href=""><span class="fa fa-address-book"></span><span>Vé</span></a>
+				</li>
+				<li>
+					<a href=""><span class="fa fa-clipboard"></span><span>Feedback khách hàng</span></a>
+				</li>
+				<!-- <li>
+					<a href=""><span class="fa fa-money"></span><span>Bilans</span></a>
+				</li>
+				<li>
+					<a href=""><span class="fa fa-registered"></span><span>Enregistrement</span></a>
+				</li>
+
+				<li>
+					<a href=""><span class="fa fa-user"></span><span>Contacts</span></a>
+				</li> -->
+			</ul>
+		</div>
+	</div>
+
+
+
+	<div class="content">
+		
+		<header>
+			<p><label for="menu"><span class="fa fa-bars"></span></label><span class="accueil">Trang chủ</span></p>
+
+			<div class="search-wrapper">
+				<span class="fa fa-search"></span>
+				<input type="search" name="" placeholder="Tìm kiếm" />
+			</div>
+
+			<div class="user-wrapper" id="dropdown">
+				<div>
+					<h4>Thông tin</h4>
+					<small>Admin</small>
+				</div>
+				
+				<img src="images/pp.jpg" width="30" height="30" class="logo-admin">
+				<div class="dropdown-content">
+				<p>Đăng xuất</p>
+				<!-- <p>Deconnexion</p> -->
+				</div>
+				
+			</div>
+		</header>
+
+		<main>
+			<div class="cards">
+				<div class="card-single">
+					<div>
+						<h2>2.000.000</h2>
+						<small>Số lượng hành khách</small>
+					</div>
+					<div>
+						<span class="fa fa-shopping-cart"></span>
+					</div>
+				</div>
+
+				<div class="card-single">
+					<div>
+						<h2>+30</h2>
+						<small>Số lượng sân bay</small>
+					</div>
+					<div>
+						<span class="fa fa-newspaper-o"></span>
+					</div>
+				</div>
+				<div class="card-single">
+					<div>
+						<h2>58</h2>
+						<small>Số lượng địa điểm</small>
+					</div>
+					<div>
+						<span class="fa fa-outdent"></span>
+					</div>
+				</div>
+				<div class="card-single">
+					<div>
+						<h2>20k</h2>
+						<small>Số chuyến bay</small>
+					</div>
+					<div>
+						<span class="fa fa-group"></span>
+					</div>
+				</div>
+			</div>
+			<div style="position: relative; top:10px;">
+				<p-table >
+					<ng-template pTemplate="header">
+						<tr>
+							<th>Id</th>
+							<th>Tên hành khách</th>
+							<th>Category</th>
+							<th>Quantity</th>
+						</tr>
+					</ng-template>
+					<!-- <ng-template pTemplate="body" let-product> -->
+						<ng-template >
+						<tr>
+							<td>fdafd</td>
+							<td>fdsf</td>
+							<td>fd</td>
+							<td>fdas</td>
+						</tr>
+					</ng-template>
+				</p-table>
+				
+			</div>
+
+
+			
+		</main>
+	</div>
+</body>
+</html>

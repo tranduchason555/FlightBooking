@@ -1,0 +1,90 @@
+<div class="row divPay">
+    <div class="column c1">
+      <h2 style="margin-bottom: 10px;">Summary</h2>
+  
+      <img src="https://images.pexels.com/photos/556663/pexels-photo-556663.jpeg" class="imgResumen">
+  
+      <div class="totalTxt">
+        <h3 style="color: #a9abae">Total</h3>
+        <h1>{{this.ve}}</h1>
+      </div>
+  
+    </div>
+    <div class="column c2">
+  
+      <h2 style="margin-bottom: 10px;">Payment</h2>
+  
+      <div class="card" id="divCard">
+        <div class='card-content'>
+          <img style="display: none" id="imgFranchise" class="logoFranquicia">
+          <div class="infoTarjeta">
+            <h5>Card Number</h5>
+            <h6 id="cardNumber">**** **** **** ****</h6>
+            <h5>Expiration<span class="cvvStyle">CVV</span></h5>
+            <h6><span id="cardMonth">**</span> / <span id="cardYear">****</span><span class="cvvStyle2" id="cardCVV">***</span></h6>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div  #paymentRef></div>
+      <button title="Make payment" [routerLink]="['/trangchu',{taikhoan:taikhoan}]" >Trở về</button>
+   
+    </div>
+  </div>
+  
+  <br>
+  <script>
+function showCN() {
+  var i = document.getElementById("pagarTarjetaNum").value;
+  document.getElementById("cardNumber").innerHTML = i;
+
+  if (i.length == 16) {
+    document.getElementById("pagarTarjetaMes").focus();
+  }
+
+  if (i.includes("1111") == true) {
+    document.getElementById("imgFranchise").src =
+      "https://brand.mastercard.com/content/dam/mccom/brandcenter/thumbnails/mastercard_vrt_pos_92px_2x.png";
+    document.getElementById("imgFranchise").style.display = "block";
+    document.getElementById("divCard").style.background =
+      "linear-gradient(90deg, #E40003 35%, #A40000 100%)";
+  } else if (i.includes("2222") == true) {
+    document.getElementById("imgFranchise").src =
+      "https://usa.visa.com/dam/VCOM/regional/lac/ENG/Default/Partner%20With%20Us/Payment%20Technology/visapos/full-color-800x450.jpg";
+    document.getElementById("imgFranchise").style.display = "block";
+
+    document.getElementById("divCard").style.background =
+      "linear-gradient(90deg, #FF8D00 35%, #FFA700 100%)";
+  } else {
+    document.getElementById("imgFranchise").style.display = "none";
+
+    document.getElementById("divCard").style.background =
+      "linear-gradient(90deg, #a9abae 35%, #e6e7e8 100%)";
+  }
+
+  if (i == "") {
+    document.getElementById("cardNumber").innerHTML = "**** **** **** ****";
+  }
+}
+
+function showCE() {
+  var im = document.getElementById("pagarTarjetaMes").value;
+  var iy = document.getElementById("pagarTarjetaAno").value;
+  document.getElementById("cardMonth").innerHTML = im;
+  document.getElementById("cardYear").innerHTML = iy;
+
+  if (im.length == 2) {
+    document.getElementById("pagarTarjetaAno").focus();
+  }
+  if (iy.length == 4) {
+    document.getElementById("pagarTarjetaCVV").focus();
+  }
+}
+
+function showCV() {
+  var i = document.getElementById("pagarTarjetaCVV").value;
+  document.getElementById("cardCVV").innerHTML = i;
+}
+
+
+  </script>

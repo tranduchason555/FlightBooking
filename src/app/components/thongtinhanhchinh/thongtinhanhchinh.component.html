@@ -1,0 +1,168 @@
+
+
+<!-- <div class="page-inner"> -->
+    <nav class="gtco-nav" role="navigation" >
+        <div class="gtco-container">
+            
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <div id="gtco-logo"><a *ngIf="taikhoan!=null" [routerLink]="['/trangchu',{taikhoan:taikhoan}]">SKYHIGH <em>.</em></a>
+                        <a *ngIf="taikhoan==null" [routerLink]="['/trangchu']">SKYHIGH <em>.</em></a>
+                    </div>
+                </div>
+                <div class="col-xs-8 text-right menu-1">
+                    <ul>
+                        <li><a *ngIf="taikhoan!=null" [routerLink]="['/ve',{taikhoan:taikhoan}]">Xem Vé</a>
+                            <a *ngIf="taikhoan==null" [routerLink]="['/thongtinhanhchinh']">Thông Tin Hành Trình</a>
+                        </li>
+                        
+                        <li class="has-dropdown">
+                            <a  *ngIf="taikhoan!=null" [routerLink]="['/datvemaybay',{taikhoan:taikhoan}]">Đặt Vé</a>
+                            <a  *ngIf="taikhoan==null" [routerLink]="['/datvemaybay']">Đặt Vé</a>
+                            <!-- <ul class="dropdown">
+                                <li><a href="#">Europe</a></li>
+                                <li><a href="#">Asia</a></li>
+                                <li><a href="#">America</a></li>
+                                <li><a href="#">Canada</a></li>
+                            </ul> -->
+                        </li>
+                        <li><a *ngIf="taikhoan!=null" [routerLink]="['/lienhe',{taikhoan:taikhoan}]">Liên hệ</a>
+                            <a *ngIf="taikhoan==null" [routerLink]="['/lienhe']">Liên hệ</a>
+                        </li>
+                
+                        <li class="has-dropdown"  >
+                            <a *ngIf="taikhoan==null" [routerLink]="['/dangnhap']">Đăng nhập</a>
+                            <a *ngIf="taikhoan!=null" [routerLink]="['/thongtincanhan',{taikhoan:taikhoan}]" ><b>Xin chào {{taikhoan}}</b></a>
+                            <a *ngIf="taikhoan!=null" [routerLink]="['/trangchu']" ><b>Đăng xuất</b></a>
+                            <!-- <ul class="dropdown">
+                                <li><a ></a></li>
+                                <li><a [routerLink]="['/dangky']">Đăng ký</a></li>
+                                <li><a href="#">Trợ giúp</a></li>
+                        
+                            </ul> -->
+                        </li>	
+                        
+                        
+                    </ul>	
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+<header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(assets/images/hinh-anh-may-bay.jpg)">
+    <div class="overlay"></div>
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <div class="row row-mt-15em">
+
+                    <div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
+                        <h1>Thông Tin Hành Trình</h1>	
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+<div>
+    
+    <!--Thông tin hành chính title--------------------------->
+    <div class="section-1-tthc">
+        <div class="section-1-hangngang">
+            <div class="hinh-1">
+                <div class="hinh-1-1">
+                    <img src="assets/images/lamthutuc.png" alt="">
+                </div>
+                <div class="hinh-1-duoi">
+                    <div class="tieu-de-hinh"><p>LÀM THỦ TỤC</p></div>
+                  
+                </div>
+            </div>
+            <!--làm thủ tục--------------------------->
+            <div class="hinh-2">
+                <div class="hinh-1-1">
+                    <img src="assets/images/thongtinquanly.png" alt="">
+                </div>
+                <div class="hinh-1-duoi">
+                    <div class="tieu-de-hinh"><p>THÔNG TIN HÀNH LÝ</p></div>
+                    
+                </div>   
+            </div>
+            <!--thông tin hành lý-->
+        </div>
+
+        <div class="section-1-hangngang">
+            <div class="hinh-1">
+                <div class="hinh-1-1">
+                    <img src="assets/images/dichvudacbiet.png" alt="">
+                </div>
+                <div class="hinh-1-duoi">
+                    <div class="tieu-de-hinh"><p>DỊCH VỤ ĐẶC BIỆT</p></div>
+                  
+                </div>
+            </div>
+            <!--dịch vụ đặc biệt-->
+            <div class="hinh-2">
+                <div class="hinh-1-1">
+                    <img src="assets/images/sanbayvanoichuyen.png" alt="">
+                </div>
+                <div class="hinh-1-duoi">
+                    <div class="tieu-de-hinh"><p>SÂN BAY NỐI CHUYẾN</p></div>
+                   
+                </div>   
+            </div>
+            <!--sân bay nối chuyến-->
+        </div>
+
+        <div class="section-1-hangngang">
+            <div class="hinh-1">
+                <div class="hinh-1-1">
+                    <img src="assets/images/yeucaugiayto.png" alt="">
+                </div>
+                <div class="hinh-1-duoi">
+                    <div class="tieu-de-hinh"><p>YÊU CẦU GIẤY TỜ</p></div>
+                    
+                </div>
+            </div>
+            <!--yêu cầu giấy tờ-->
+        </div>
+
+        
+    </div>
+</div>
+
+
+
+<div id="gtco-subscribe" style="background-color: cadetblue;">
+    <div class="gtco-container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                <h2>Hãy gửi gmail đến chúng tôi</h2>
+                <p>Khách hàng sẽ nhận về những thông tin mới nhất về các chuyến bay và dịch vụ tốt nhất của hãng hàng không SKYHIGH</p>
+            </div>
+        </div>
+        <div class="row animate-box" >
+            <div class="col-md-8 col-md-offset-2">
+                <form class="form-inline">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <button type="submit" class="btn btn-default btn-block">Gửi</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="tm-container-outer">
+    <p class="mb-0">Copyright © <span class="tm-current-year">2023</span> SKYHIGH
+        
+    . Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">SKYHIGH</a></p>
+</footer>
